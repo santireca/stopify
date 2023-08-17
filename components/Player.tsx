@@ -1,6 +1,6 @@
 'use client'
 
-import useGetSongById from '@/hooks/useGetSongById';
+import useGetSongByIdDALE from '@/hooks/useGetSongByIdDALE';
 import useLoadSongUrl from '@/hooks/useLoadSongUrl';
 import usePlayer from "@/hooks/usePlayer";
 import PlayerContent from './PlayerContent';
@@ -8,7 +8,7 @@ import PlayerContent from './PlayerContent';
 const Player = () => {
 
     const player = usePlayer();
-    const { song } = useGetSongById(player.activeId);
+    const { song } = useGetSongByIdDALE(player.activeId);
 
     const songUrl = useLoadSongUrl(song!);
 
